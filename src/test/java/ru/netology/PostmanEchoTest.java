@@ -23,7 +23,7 @@ public class PostmanEchoTest {
         given()
                 .baseUri("https://postman-echo.com")
                 .contentType("application/json")
-                .body(jsonObj.toString()) // отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body(jsonObj.getString("Date")) // отправляемые данные (заголовки и query можно выставлять аналогично)
 // Выполняемые действия
         .when()
                 .post("/post")
@@ -31,7 +31,7 @@ public class PostmanEchoTest {
         .then()
        //         .assertThat(from()
                 .statusCode(200)
-                .body("data", equalTo("{Date=05.02.2021}"))
+                .body("data", equalTo("06.02.2021"))
         ;
     }
 }
