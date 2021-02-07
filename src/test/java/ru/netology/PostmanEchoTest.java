@@ -31,7 +31,7 @@ public class PostmanEchoTest {
         .then()
        //         .assertThat(from()
                 .statusCode(200)
-                .body("data", equalTo("06.02.2021"))
+                .body("data", equalTo("05.02.2021"))
         ;
     }
 }
